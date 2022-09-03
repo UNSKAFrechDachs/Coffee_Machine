@@ -9,7 +9,7 @@ class CoffeeMachine {
     private var money = 550
 
     fun printPrompt() {
-          print(state.prompt)
+        print(state.prompt)
     }
 
     fun action(input: String) {
@@ -21,10 +21,13 @@ class CoffeeMachine {
         }
     }
 
-    private fun quit(){ state = State.QUIT}
+    private fun quit() {
+        state = State.QUIT
+    }
 
     private fun printStatus() {
-        println(""" 
+        println(
+            """ 
             
         The coffee machine has:
         $water ml of water
@@ -33,17 +36,20 @@ class CoffeeMachine {
         $cups disposable cups
         $$money of money 
         
-        """.trimIndent())
+        """.trimIndent()
+        )
 
         state = State.MAIN_MENU
     }
 
     private fun take() {
-        println("""
+        println(
+            """
             
             I gave you $$money
             
-        """.trimIndent())
+            """.trimIndent()
+        )
         money = 0
         state = State.MAIN_MENU
     }
