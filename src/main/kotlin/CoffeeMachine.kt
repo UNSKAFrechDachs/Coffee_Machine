@@ -103,16 +103,16 @@ class CoffeeMachine {
                     if (coffee.beansNeeded < beans) {
                         return true
                     } else {
-                        println("Sorry, not enough coffee beans!\n")
+                        println("Sorry, not enough coffee beans! I need ${coffee.beansNeeded - beans} g more coffee beans!\n")
                     }
                 } else {
-                    println("Sorry, not enough milk!\n")
+                    println("Sorry, not enough milk! I need ${coffee.milkNeeded - milk} ml more milk!\n")
                 }
             } else {
-                println("Sorry, not enough water!\n")
+                println("Sorry, not enough water! I need ${coffee.waterNeeded - water} ml more water!\n")
             }
         } else {
-            println("Sorry, not enough cups!\n")
+            println("Sorry, not enough cups! I need at least one cup!\n")
         }
         return false
     }
