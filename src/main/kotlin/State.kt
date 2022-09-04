@@ -9,5 +9,5 @@ enum class State(val prompt: String) {
     FILL_CUPS("Write how many disposable cups of coffee do you want to add: "),
     REMAINING(""),
     TAKE(""),
-    QUIT("");
+    QUIT("Shutting down!");
 }
